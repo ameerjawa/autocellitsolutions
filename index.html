@@ -146,16 +146,60 @@ body {
 .nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 20px;
     background: #001a33;
     color: white;
+    flex-wrap: wrap;
+}
+
+.nav h3 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
 }
 
 .nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
+    font-size: 1rem;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    /* Navbar adjustments for mobile */
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .nav h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav a {
+        padding: 10px 0;
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: left;
+    }
+}
+
 
 section {
             padding: 50px 20px;
@@ -217,7 +261,7 @@ section {
 <body>
     <div class="nav">
         <h3>Auto Cell IT Solutions</h3>
-        <div>
+        <div class="nav-links">
             <a href="#services">Services</a>
             <a href="#features">Features</a>
             <a href="#how-it-works">How It Works</a>
